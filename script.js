@@ -1,19 +1,21 @@
 const makeChange = (c) => {
-  // your name here
-	c = Number(c);
+  c = Number(c); // convert input to number
 
-	let q = Math.floor(c / 25);
-	c %= 25;
+  let q = Math.floor(c / 25);
+  c %= 25;
 
-	let d = Math.floor(c / 10);
-	c %= 10;
+  let d = Math.floor(c / 10);
+  c %= 10;
 
-	let n = Math.floor(c / 5);
-	c %= 5;
+  let n = Math.floor(c / 5);
+  c %= 5;
 
-	return {q,d,n,p}
+  let p = c;
+
+  return { q, d, n, p };
 };
 
 // Do not the change the code below
 const c = prompt("Enter c: ");
 alert(JSON.stringify(makeChange(c)));
+
